@@ -6,23 +6,28 @@ import Contact from "./components/Contact"
 import { useState } from "react";
 
 
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  return (
-    <div className={darkMode ? "dark-mode" : ""}>
-      <button onClick={() => setDarkMode(!darkMode)}
-        Toggle Dark Mode
-        style={{ margin: "1rem", padding: "0.5rem 1rem", cursor: "pointer" }}
-        >
-        {darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
-      </button>
+    if (darkMode) {
+        document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
+
+  return (     
+    <div>
+    
       <h1>My Personal Online CV</h1>
-      <Header />
-      <About />
-      <Skills />
-      <Education />
-      <Contact />
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+      <About darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Skills darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Education darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Contact darkMode={darkMode} setDarkMode={setDarkMode} />
+       <footer>
+        <p>&copy; 2026 Your Name. All rights reserved. </p>
+      </footer>
     </div>
   );
 }
