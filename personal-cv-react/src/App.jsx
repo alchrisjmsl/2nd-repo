@@ -16,6 +16,41 @@ function App() {
         document.body.classList.remove("dark-mode");
     }
 
+    const skills = [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React"
+      ];
+
+      const education = [
+        {
+          year: "2028",
+          program: "BS Information Technology",
+          school: "USTP – CDO Campus"
+        },
+        {
+          year: "2023",
+          program: "Senior High",
+          school: "Bukidnon National School of Home Industries"
+        },
+        {
+          year: "2021",
+          program: "High School",
+          school: "Langcataon national High School"
+        },
+        {
+          year: "2016",
+          program: "Elementary",
+          school: "Langcataon Central Elementary School"
+        },
+        {
+          year: "2010",
+          program: "Kindergarten",
+          school: " "
+        }
+      ]; 
+
   return (     
     <div>
     
@@ -25,6 +60,8 @@ function App() {
       <Skills darkMode={darkMode} setDarkMode={setDarkMode} />
       <Education darkMode={darkMode} setDarkMode={setDarkMode} />
       <Contact darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Skills skills={skills} />
+      <Education education={education} />
        <footer>
         <p>&copy; 2026 Your Name. All rights reserved. </p>
       </footer>
