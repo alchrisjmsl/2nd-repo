@@ -10,12 +10,6 @@ import { useState } from "react";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-    if (darkMode) {
-        document.body.classList.add("dark-mode");
-    } else {
-        document.body.classList.remove("dark-mode");
-    }
-
     const skills = [
       "HTML",
       "CSS",
@@ -51,21 +45,24 @@ function App() {
         }
       ]; 
 
-  return (     
-    <div>
-    
-      <h1>My Personal Online CV</h1>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <About darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Skills darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Education darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Contact darkMode={darkMode} setDarkMode={setDarkMode} />
+return ( 
+  <>   
+    <div className={darkMode ? "dark-mode" : ""}>
+      <button onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+      </button>
+
+      <Header />
+      <About />
+      <Contact />
       <Skills skills={skills} />
       <Education education={education} />
+      
        <footer>
         <p>&copy; 2026 Your Name. All rights reserved. </p>
       </footer>
     </div>
+  </> 
   );
 }
 export default App;
