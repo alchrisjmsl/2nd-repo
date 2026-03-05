@@ -52,6 +52,8 @@ return (
         {darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
       </button>
 
+      <h1>My Personal Online CV</h1>
+
       <Header />
       <About />
       <Contact />
