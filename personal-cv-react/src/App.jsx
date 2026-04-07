@@ -56,9 +56,9 @@ return (
 
       <Header />
       <About />
-      <Contact />
-      <Skills skills={skills} />
       <Education education={education} />
+      <Skills skills={skills} />
+      <Contact />
       
        <footer>
         <p>&copy; 2026 Your Name. All rights reserved. </p>
