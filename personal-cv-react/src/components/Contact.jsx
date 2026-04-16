@@ -8,7 +8,7 @@ function Contact() {
 
 function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost/cv-api/process.php", {
+    fetch("http://localhost/cv-api/cv-api-react/process.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

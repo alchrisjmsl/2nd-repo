@@ -4,6 +4,7 @@ import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact"
 import { useState } from "react";
+import ContactList from "./components/ContactList";
 
 
 
@@ -59,6 +60,7 @@ return (
       <Education education={education} />
       <Skills skills={skills} />
       <Contact />
+      <ContactList />
       
        <footer>
         <p>&copy; 2026 Your Name. All rights reserved. </p>
