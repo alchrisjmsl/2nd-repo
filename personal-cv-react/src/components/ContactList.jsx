@@ -9,7 +9,7 @@ function ContactList() {
     }, []);
 
     return (
-    <div className="Container">
+    <div className="container">
         <section className="card">
             <h2>Saved Contacts</h2>
             <ul>

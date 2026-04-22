@@ -13,12 +13,19 @@ function handleSubmit(e) {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ name: name })
+      body: JSON.stringify({
+         name: name, 
+         email: email,
+         message: message
+        })
     })
       .then(res => res.json())
       .then(data => {
         if (data.message) {
           alert(data.message);
+          setName("");
+          setEmail("");
+          setMessage("")
         } else {
           alert("Unexpected error occurred.");
         }
